@@ -1,0 +1,13 @@
+# Embedding Model .dockerignore
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.gitignore
+.dockerignore
+Dockerfile
+requirements.txt
+venv
+.venv
+.vscode
+.idea
