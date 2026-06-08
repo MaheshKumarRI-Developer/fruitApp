@@ -1,0 +1,35 @@
+services:
+  # 1. Embedding Model Service (FastAPI)
+  - type: web
+    name: fruitapp-embedding
+    env: docker
+    dockerfilePath: embedding_model/Dockerfile
+    dockerContext: embedding_model
+    plan: free
+    startCommand: uvicorn embedding_model:app --host 0.0.0.0 --port 8000
+
+  # 2. Backend API Service (Express)
+  - type: web
+    name: fruitapp-backend
+    env: docker
+    dockerfilePath: backend/Dockerfile
+    dockerContext: backend
+    plan: free
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: EMBEDDING_SERVICE_URL
+        value: http://fruitapp-embedding:8000/embed # Render internal networking URL
+      # You must add GROQ_API_KEY, GROQ_MODEL, QDRANT_URL, etc., in Render's dashboard.
+
+  # 3. Frontend Static Website (React + Vite)
+  - type: web
+    name: fruitapp-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: npm run build
+    publishPath: dist
+    plan: free
+    envVars:
+      - key: VITE_API_URL
+        value: https://fruitapp-backend.onrender.com # Replace with your backend's actual public URL after deployment
