@@ -7,7 +7,7 @@ RUN npm ci
 
 COPY . .
 ARG VITE_API_URL
-ENV VITE_API_URL=$VITE_API_URL
+ENV VITE_API_URL=https://fruitapp-backend-5tmw.onrender.com
 RUN npm run build
 
 FROM nginx:stable-alpine
