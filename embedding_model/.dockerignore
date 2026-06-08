@@ -6,7 +6,6 @@ __pycache__
 .gitignore
 .dockerignore
 Dockerfile
-requirements.txt
 venv
 .venv
 .vscode
