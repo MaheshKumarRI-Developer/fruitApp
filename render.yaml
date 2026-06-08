@@ -1,10 +1,10 @@
 services:
-  # 1. Embedding Model Service (FastAPI)
-  - type: web
-    name: fruitapp-embedding
-    env: docker
-    dockerfilePath: embedding_model/Dockerfile
-    dockerContext: embedding_model
+  # 1. Embedding Model Service (FastAPI) — Deploy separately (e.g., HuggingFace Spaces)
+  # - type: web
+  #   name: fruitapp-embedding
+  #   env: docker
+  #   dockerfilePath: embedding_model/Dockerfile
+  #   dockerContext: embedding_model
 
   # 2. Backend API Service (Express)
   - type: web
