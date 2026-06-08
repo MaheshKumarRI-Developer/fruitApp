@@ -22,12 +22,13 @@ services:
         value: http://fruitapp-embedding:8000/embed # Render internal networking URL
       # You must add GROQ_API_KEY, GROQ_MODEL, QDRANT_URL, etc., in Render's dashboard.
 
-  # 3. Frontend Static Website (React + Vite)
-  - type: static
+  # 3. Frontend Web Service (React + Vite + Nginx via Docker)
+  - type: web
     name: fruitapp-frontend
-    rootDir: frontend
-    buildCommand: npm run build
-    staticPublishPath: dist
+    env: docker
+    dockerfilePath: frontend/Dockerfile
+    dockerContext: frontend
     envVars:
       - key: VITE_API_URL
         value: https://fruitapp-backend.onrender.com # Replace with your backend's actual public URL after deployment
+
