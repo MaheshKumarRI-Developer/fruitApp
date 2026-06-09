@@ -17,7 +17,9 @@ services:
     restart: unless-stopped
 
   backend:
-    build: ./backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     container_name: fruitapp-backend
     ports:
       - "5000:5000"

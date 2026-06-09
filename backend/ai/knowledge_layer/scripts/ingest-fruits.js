@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 const { buildDocument } = require("../services/document-builder");
 const { getEmbedding } = require("../services/embedding-service");
 const { buildPoint } = require("../services/qdrant-point-builder");
@@ -22,7 +23,7 @@ async function main() {
       console.log(`[${i + 1}/${fruits.length}] Embedding ${fruit.fruit}...`);
       const vector = await getEmbedding(docText);
 
-      const point = buildPoint(i + 1, vector, {
+      const point = buildPoint(crypto.randomUUID(), vector, {
         ...fruit,
         document_text: docText
       });

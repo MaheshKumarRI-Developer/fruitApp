@@ -7,15 +7,15 @@ function buildContext(results) {
 Fruit: ${fruit.fruit}
 
 Components:
-${fruit.components
-  .map(c => `- ${c.name}: ${c.description}`)
+${(fruit.components || [])
+  .map(c => `- ${c.name || ''}: ${c.description || ''}`)
   .join("\n")}
 
 Vitamins:
-${fruit.vitamins.join(", ")}
+${(fruit.vitamins || []).join(", ")}
 
 Minerals:
-${fruit.minerals.join(", ")}
+${(fruit.minerals || []).join(", ")}
 `;
     })
     .join("\n-------------------\n");
