@@ -1,0 +1,15 @@
+{
+  "name": "qdrant-fruits-seeder",
+  "version": "1.0.0",
+  "description": "Production-ready seeding script for Qdrant Cloud collection",
+  "main": "seed-fruits.js",
+  "scripts": {
+    "start": "node seed-fruits.js"
+  },
+  "dependencies": {
+    "@qdrant/js-client-rest": "^1.18.0",
+    "axios": "^1.17.0",
+    "dotenv": "^17.4.2",
+    "uuid": "^9.0.1"
+  }
+}

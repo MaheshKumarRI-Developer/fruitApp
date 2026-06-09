@@ -1,0 +1,752 @@
+[
+  {
+    "fruit": "Mango",
+    "components": [
+      {
+        "name": "Citric Acid",
+        "amount": "Typical amount",
+        "description": "Citric Acid is a naturally occurring compound found in mango."
+      },
+      {
+        "name": "Beta-Carotene",
+        "amount": "Typical amount",
+        "description": "Beta-Carotene is a naturally occurring compound found in mango."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in mango."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Vitamin E"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Calcium"
+    ]
+  },
+  {
+    "fruit": "Banana",
+    "components": [
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in banana."
+      },
+      {
+        "name": "Glucose",
+        "amount": "Typical amount",
+        "description": "Glucose is a naturally occurring compound found in banana."
+      },
+      {
+        "name": "Pectin",
+        "amount": "Typical amount",
+        "description": "Pectin is a naturally occurring compound found in banana."
+      }
+    ],
+    "vitamins": [
+      "Vitamin B6",
+      "Vitamin C",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Manganese"
+    ]
+  },
+  {
+    "fruit": "Apple",
+    "components": [
+      {
+        "name": "Malic Acid",
+        "amount": "Typical amount",
+        "description": "Malic Acid is a naturally occurring compound found in apple."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in apple."
+      },
+      {
+        "name": "Pectin",
+        "amount": "Typical amount",
+        "description": "Pectin is a naturally occurring compound found in apple."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin K",
+      "Vitamin B6"
+    ],
+    "minerals": [
+      "Potassium",
+      "Phosphorus",
+      "Magnesium"
+    ]
+  },
+  {
+    "fruit": "Orange",
+    "components": [
+      {
+        "name": "Citric Acid",
+        "amount": "Typical amount",
+        "description": "Citric Acid is a naturally occurring compound found in orange."
+      },
+      {
+        "name": "Hesperidin",
+        "amount": "Typical amount",
+        "description": "Hesperidin is a naturally occurring compound found in orange."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in orange."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Calcium",
+      "Magnesium"
+    ]
+  },
+  {
+    "fruit": "Guava",
+    "components": [
+      {
+        "name": "Lycopene",
+        "amount": "Typical amount",
+        "description": "Lycopene is a naturally occurring compound found in guava."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in guava."
+      },
+      {
+        "name": "Pectin",
+        "amount": "Typical amount",
+        "description": "Pectin is a naturally occurring compound found in guava."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Calcium"
+    ]
+  },
+  {
+    "fruit": "Papaya",
+    "components": [
+      {
+        "name": "Papain",
+        "amount": "Typical amount",
+        "description": "Papain is a naturally occurring compound found in papaya."
+      },
+      {
+        "name": "Beta-Carotene",
+        "amount": "Typical amount",
+        "description": "Beta-Carotene is a naturally occurring compound found in papaya."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in papaya."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Vitamin E"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Calcium"
+    ]
+  },
+  {
+    "fruit": "Pineapple",
+    "components": [
+      {
+        "name": "Bromelain",
+        "amount": "Typical amount",
+        "description": "Bromelain is a naturally occurring compound found in pineapple."
+      },
+      {
+        "name": "Citric Acid",
+        "amount": "Typical amount",
+        "description": "Citric Acid is a naturally occurring compound found in pineapple."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in pineapple."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin B6",
+      "Folate"
+    ],
+    "minerals": [
+      "Manganese",
+      "Potassium",
+      "Magnesium"
+    ]
+  },
+  {
+    "fruit": "Watermelon",
+    "components": [
+      {
+        "name": "Lycopene",
+        "amount": "Typical amount",
+        "description": "Lycopene is a naturally occurring compound found in watermelon."
+      },
+      {
+        "name": "Citrulline",
+        "amount": "Typical amount",
+        "description": "Citrulline is a naturally occurring compound found in watermelon."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in watermelon."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Vitamin B6"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Phosphorus"
+    ]
+  },
+  {
+    "fruit": "Pomegranate",
+    "components": [
+      {
+        "name": "Punicalagin",
+        "amount": "Typical amount",
+        "description": "Punicalagin is a naturally occurring compound found in pomegranate."
+      },
+      {
+        "name": "Ellagic Acid",
+        "amount": "Typical amount",
+        "description": "Ellagic Acid is a naturally occurring compound found in pomegranate."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in pomegranate."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin K",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Phosphorus"
+    ]
+  },
+  {
+    "fruit": "Grapes",
+    "components": [
+      {
+        "name": "Resveratrol",
+        "amount": "Typical amount",
+        "description": "Resveratrol is a naturally occurring compound found in grapes."
+      },
+      {
+        "name": "Quercetin",
+        "amount": "Typical amount",
+        "description": "Quercetin is a naturally occurring compound found in grapes."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in grapes."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin K",
+      "Vitamin B6"
+    ],
+    "minerals": [
+      "Potassium",
+      "Copper",
+      "Manganese"
+    ]
+  },
+  {
+    "fruit": "Strawberry",
+    "components": [
+      {
+        "name": "Ellagic Acid",
+        "amount": "Typical amount",
+        "description": "Ellagic Acid is a naturally occurring compound found in strawberry."
+      },
+      {
+        "name": "Anthocyanins",
+        "amount": "Typical amount",
+        "description": "Anthocyanins is a naturally occurring compound found in strawberry."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in strawberry."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Folate",
+      "Vitamin K"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Manganese"
+    ]
+  },
+  {
+    "fruit": "Blueberry",
+    "components": [
+      {
+        "name": "Anthocyanins",
+        "amount": "Typical amount",
+        "description": "Anthocyanins is a naturally occurring compound found in blueberry."
+      },
+      {
+        "name": "Quercetin",
+        "amount": "Typical amount",
+        "description": "Quercetin is a naturally occurring compound found in blueberry."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in blueberry."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin K",
+      "Vitamin E"
+    ],
+    "minerals": [
+      "Potassium",
+      "Manganese",
+      "Copper"
+    ]
+  },
+  {
+    "fruit": "Kiwi",
+    "components": [
+      {
+        "name": "Actinidin",
+        "amount": "Typical amount",
+        "description": "Actinidin is a naturally occurring compound found in kiwi."
+      },
+      {
+        "name": "Citric Acid",
+        "amount": "Typical amount",
+        "description": "Citric Acid is a naturally occurring compound found in kiwi."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in kiwi."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin E",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Copper"
+    ]
+  },
+  {
+    "fruit": "Pear",
+    "components": [
+      {
+        "name": "Pectin",
+        "amount": "Typical amount",
+        "description": "Pectin is a naturally occurring compound found in pear."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in pear."
+      },
+      {
+        "name": "Malic Acid",
+        "amount": "Typical amount",
+        "description": "Malic Acid is a naturally occurring compound found in pear."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin K",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Copper",
+      "Magnesium"
+    ]
+  },
+  {
+    "fruit": "Peach",
+    "components": [
+      {
+        "name": "Chlorogenic Acid",
+        "amount": "Typical amount",
+        "description": "Chlorogenic Acid is a naturally occurring compound found in peach."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in peach."
+      },
+      {
+        "name": "Carotenoids",
+        "amount": "Typical amount",
+        "description": "Carotenoids is a naturally occurring compound found in peach."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Vitamin E"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Phosphorus"
+    ]
+  },
+  {
+    "fruit": "Plum",
+    "components": [
+      {
+        "name": "Anthocyanins",
+        "amount": "Typical amount",
+        "description": "Anthocyanins is a naturally occurring compound found in plum."
+      },
+      {
+        "name": "Sorbitol",
+        "amount": "Typical amount",
+        "description": "Sorbitol is a naturally occurring compound found in plum."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in plum."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin K",
+      "Vitamin A"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Copper"
+    ]
+  },
+  {
+    "fruit": "Cherry",
+    "components": [
+      {
+        "name": "Anthocyanins",
+        "amount": "Typical amount",
+        "description": "Anthocyanins is a naturally occurring compound found in cherry."
+      },
+      {
+        "name": "Melatonin",
+        "amount": "Typical amount",
+        "description": "Melatonin is a naturally occurring compound found in cherry."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in cherry."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Vitamin K"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Copper"
+    ]
+  },
+  {
+    "fruit": "Jackfruit",
+    "components": [
+      {
+        "name": "Lignans",
+        "amount": "Typical amount",
+        "description": "Lignans is a naturally occurring compound found in jackfruit."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in jackfruit."
+      },
+      {
+        "name": "Carotenoids",
+        "amount": "Typical amount",
+        "description": "Carotenoids is a naturally occurring compound found in jackfruit."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Vitamin B6"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Calcium"
+    ]
+  },
+  {
+    "fruit": "Amla",
+    "components": [
+      {
+        "name": "Ascorbic Acid",
+        "amount": "Typical amount",
+        "description": "Ascorbic Acid is a naturally occurring compound found in amla."
+      },
+      {
+        "name": "Tannins",
+        "amount": "Typical amount",
+        "description": "Tannins is a naturally occurring compound found in amla."
+      },
+      {
+        "name": "Polyphenols",
+        "amount": "Typical amount",
+        "description": "Polyphenols is a naturally occurring compound found in amla."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Vitamin E"
+    ],
+    "minerals": [
+      "Calcium",
+      "Iron",
+      "Phosphorus"
+    ]
+  },
+  {
+    "fruit": "Coconut",
+    "components": [
+      {
+        "name": "Lauric Acid",
+        "amount": "Typical amount",
+        "description": "Lauric Acid is a naturally occurring compound found in coconut."
+      },
+      {
+        "name": "Capric Acid",
+        "amount": "Typical amount",
+        "description": "Capric Acid is a naturally occurring compound found in coconut."
+      },
+      {
+        "name": "Fiber",
+        "amount": "Typical amount",
+        "description": "Fiber is a naturally occurring compound found in coconut."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin E",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Manganese",
+      "Copper"
+    ]
+  },
+  {
+    "fruit": "Lemon",
+    "components": [
+      {
+        "name": "Citric Acid",
+        "amount": "Typical amount",
+        "description": "Citric Acid is a naturally occurring compound found in lemon."
+      },
+      {
+        "name": "Limonene",
+        "amount": "Typical amount",
+        "description": "Limonene is a naturally occurring compound found in lemon."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in lemon."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin B6",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Calcium",
+      "Magnesium"
+    ]
+  },
+  {
+    "fruit": "Lime",
+    "components": [
+      {
+        "name": "Citric Acid",
+        "amount": "Typical amount",
+        "description": "Citric Acid is a naturally occurring compound found in lime."
+      },
+      {
+        "name": "Limonene",
+        "amount": "Typical amount",
+        "description": "Limonene is a naturally occurring compound found in lime."
+      },
+      {
+        "name": "Flavonoids",
+        "amount": "Typical amount",
+        "description": "Flavonoids is a naturally occurring compound found in lime."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Calcium",
+      "Magnesium"
+    ]
+  },
+  {
+    "fruit": "Dragon Fruit",
+    "components": [
+      {
+        "name": "Betalains",
+        "amount": "Typical amount",
+        "description": "Betalains is a naturally occurring compound found in dragon fruit."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in dragon fruit."
+      },
+      {
+        "name": "Polyphenols",
+        "amount": "Typical amount",
+        "description": "Polyphenols is a naturally occurring compound found in dragon fruit."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin B1",
+      "Vitamin B2"
+    ],
+    "minerals": [
+      "Iron",
+      "Magnesium",
+      "Phosphorus"
+    ]
+  },
+  {
+    "fruit": "Sapota",
+    "components": [
+      {
+        "name": "Tannins",
+        "amount": "Typical amount",
+        "description": "Tannins is a naturally occurring compound found in sapota."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in sapota."
+      },
+      {
+        "name": "Polyphenols",
+        "amount": "Typical amount",
+        "description": "Polyphenols is a naturally occurring compound found in sapota."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin A",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Copper",
+      "Iron"
+    ]
+  },
+  {
+    "fruit": "Custard Apple",
+    "components": [
+      {
+        "name": "Acetogenins",
+        "amount": "Typical amount",
+        "description": "Acetogenins is a naturally occurring compound found in custard apple."
+      },
+      {
+        "name": "Fructose",
+        "amount": "Typical amount",
+        "description": "Fructose is a naturally occurring compound found in custard apple."
+      },
+      {
+        "name": "Fiber",
+        "amount": "Typical amount",
+        "description": "Fiber is a naturally occurring compound found in custard apple."
+      }
+    ],
+    "vitamins": [
+      "Vitamin C",
+      "Vitamin B6",
+      "Folate"
+    ],
+    "minerals": [
+      "Potassium",
+      "Magnesium",
+      "Copper"
+    ]
+  }
+]
