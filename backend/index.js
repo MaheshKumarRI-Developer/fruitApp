@@ -164,7 +164,14 @@ app.post('/api/admin/ingest', async (req, res) => {
     res.json({ success: true, message: `Ingested ${fruits.length} fruits into fruits_knowledge_base.` });
   } catch (error) {
     console.error('[INGEST] Error:', error.message);
-    res.status(500).json({ error: 'Ingestion failed', details: error.message });
+    const debugInfo = {
+      message: error.message,
+      url: error.config ? error.config.url : undefined,
+      method: error.config ? error.config.method : undefined,
+      status: error.response ? error.response.status : undefined,
+      responseData: error.response ? error.response.data : undefined
+    };
+    res.status(500).json({ error: 'Ingestion failed', details: debugInfo });
   }
 });
 
@@ -224,6 +231,14 @@ async function autoSeedKnowledgeBase() {
   } catch (err) {
     // Non-fatal — server keeps running even if seeding fails
     console.error('[AUTO-SEED] Failed (will retry on next restart):', err.message);
+    if (err.config) {
+      console.error('[AUTO-SEED] Failed Request URL:', err.config.url);
+      console.error('[AUTO-SEED] Failed Request Method:', err.config.method);
+    }
+    if (err.response) {
+      console.error('[AUTO-SEED] Response Status:', err.response.status);
+      console.error('[AUTO-SEED] Response Data:', JSON.stringify(err.response.data));
+    }
   }
 }
 
