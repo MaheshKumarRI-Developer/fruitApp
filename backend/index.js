@@ -16,7 +16,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Explicitly handle preflight OPTIONS for all routes (required for Express 5)
-app.options('*', cors(corsOptions));
+app.options('/{*splat}', cors(corsOptions));
 
 app.use(express.json());
 
