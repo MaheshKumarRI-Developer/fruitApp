@@ -5,8 +5,25 @@ const { generateFruitData } = require('./ai/AI_foundation/providers/index.js');
 const { validateFruitResponse } = require('./ai/AI_foundation/validate/validate.js');
 
 const app = express();
-app.use(cors());
+
+// CORS configuration — must be before all routes
+const corsOptions = {
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200  // Some legacy browsers choke on 204
+};
+app.use(cors(corsOptions));
+
+// Explicitly handle preflight OPTIONS for all routes (required for Express 5)
+app.options('*', cors(corsOptions));
+
 app.use(express.json());
+
+// Health-check endpoint
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', message: 'FruitApp Backend is running' });
+});
 
 const PORT = process.env.PORT || 5000;
 
