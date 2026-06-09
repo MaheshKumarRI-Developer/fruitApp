@@ -140,8 +140,8 @@ app.post('/api/admin/ingest', async (req, res) => {
       console.log('[INGEST] Collection already exists, upserting points...');
     }
 
-    // Load dataset — it lives at the root of the project, copied into the Docker image
-    const datasetPath = path.join(__dirname, '..', '25_fruits_rag_dataset.json');
+    // Load dataset — lives in backend/ folder (same level as index.js)
+    const datasetPath = path.join(__dirname, '25_fruits_rag_dataset.json');
     if (!fs.existsSync(datasetPath)) {
       return res.status(500).json({ error: `Dataset not found at ${datasetPath}` });
     }
@@ -168,6 +168,67 @@ app.post('/api/admin/ingest', async (req, res) => {
   }
 });
 
+// ─── Auto-seed on startup ────────────────────────────────────────────────────
+// Runs AFTER server starts so health checks pass immediately.
+// Checks if Qdrant collection is empty → seeds if needed → does nothing if full.
+async function autoSeedKnowledgeBase() {
+  try {
+    const fs = require('fs');
+    const path = require('path');
+    const crypto = require('crypto');
+    const client = require('./ai/knowledge_layer/qdrant/client.js');
+    const { createCollection } = require('./ai/knowledge_layer/qdrant/collection.js');
+    const { buildDocument } = require('./ai/knowledge_layer/services/document-builder.js');
+    const { getEmbedding } = require('./ai/knowledge_layer/services/embedding-service.js');
+    const { buildPoint } = require('./ai/knowledge_layer/services/qdrant-point-builder.js');
+    const { upsertPoints } = require('./ai/knowledge_layer/qdrant/upsert.js');
+
+    console.log('[AUTO-SEED] Checking knowledge base...');
+
+    // Step 1: Ensure collection exists
+    const collections = await client.getCollections();
+    const exists = collections.collections.some(c => c.name === 'fruits_knowledge_base');
+    if (!exists) {
+      console.log('[AUTO-SEED] Collection not found. Creating...');
+      await createCollection('fruits_knowledge_base', 384);
+    }
+
+    // Step 2: Check if already populated
+    const info = await client.getCollection('fruits_knowledge_base');
+    const pointCount = info.points_count ?? 0;
+    if (pointCount > 0) {
+      console.log(`[AUTO-SEED] Already seeded (${pointCount} points). Skipping.`);
+      return;
+    }
+
+    // Step 3: Collection is empty → ingest
+    console.log('[AUTO-SEED] Collection is empty. Starting ingestion...');
+    const datasetPath = path.join(__dirname, '25_fruits_rag_dataset.json');
+    if (!fs.existsSync(datasetPath)) {
+      console.warn(`[AUTO-SEED] Dataset not found at ${datasetPath}. Skipping.`);
+      return;
+    }
+
+    const fruits = JSON.parse(fs.readFileSync(datasetPath, 'utf8'));
+    const points = [];
+    for (let i = 0; i < fruits.length; i++) {
+      const fruit = fruits[i];
+      const docText = buildDocument(fruit);
+      console.log(`[AUTO-SEED] [${i + 1}/${fruits.length}] Embedding ${fruit.fruit}...`);
+      const vector = await getEmbedding(docText);
+      points.push(buildPoint(crypto.randomUUID(), vector, { ...fruit, document_text: docText }));
+    }
+
+    await upsertPoints('fruits_knowledge_base', points);
+    console.log(`[AUTO-SEED] ✅ Done! Ingested ${fruits.length} fruits.`);
+  } catch (err) {
+    // Non-fatal — server keeps running even if seeding fails
+    console.error('[AUTO-SEED] Failed (will retry on next restart):', err.message);
+  }
+}
+
 app.listen(PORT, () => {
   console.log(`Backend server running on http://localhost:${PORT}`);
+  // Kick off seeding in background — don't await so server starts instantly
+  autoSeedKnowledgeBase();
 });
